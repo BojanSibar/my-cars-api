@@ -1,0 +1,48 @@
+### Create a new user
+POST http://localhost:9999/auth/signup
+Content-Type: application/json
+
+{
+    "email": "email@test.com",
+    "password": "5555"
+}
+
+### Login a user 
+POST http://localhost:9999/auth/signin
+Content-Type: application/json
+
+{
+    "email": "email@test.com",
+    "password": "5555"
+}
+
+### Get signin user
+GET http://localhost:9999/auth/whoami
+
+### Sign user out 
+POST  http://localhost:9999/auth/signout
+
+### Find a particular user with a given ID
+GET http://localhost:9999/auth/7
+
+
+### Find all users with a given email
+GET http://localhost:9999/auth?email=test@gmail.com
+
+
+### Update user
+PUT http://localhost:9999/auth/233
+Content-Type: application/json
+
+{
+    "password": "123456"
+}
+
+### Delete a user with given id
+DELETE http://localhost:9999/auth/34
+
+### Set a color
+GET http://localhost:9999/auth/colors/red
+
+### Get a color
+GET http://localhost:9999/auth/colors
